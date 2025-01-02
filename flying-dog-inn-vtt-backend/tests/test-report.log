@@ -1,0 +1,24 @@
+[2025-01-02T00:13:11.296Z] Starting authentication tests...
+[2025-01-02T00:13:11.301Z] TEST 1: Testing successful authentication flow
+[2025-01-02T00:13:11.301Z] Step 1.1: Sending login request with correct password and empty username
+[2025-01-02T00:13:11.330Z] Step 1.1a: Received response with status 200
+[2025-01-02T00:13:11.330Z] Step 1.2: Login successful, received response
+[2025-01-02T00:13:11.330Z] Step 1.2a: Received cookies: auth_token=01689194ee0a3d6f4698a1a6a8401eb3b37587fa184911ed8a412145f382b648; Max-Age=315360000; Path=/; Expires=Sun, 31 Dec 2034 00:13:11 GMT; HttpOnly; SameSite=Strict
+[2025-01-02T00:13:11.330Z] Step 1.3: Successfully extracted auth token from cookies
+[2025-01-02T00:13:11.330Z] Step 1.4: Validating token with auth service
+[2025-01-02T00:13:11.333Z] Step 1.5: Token successfully validated
+[2025-01-02T00:13:11.334Z] TEST 1: PASSED - Successful authentication flow complete
+[2025-01-02T00:13:11.334Z] Waiting 5 seconds for rate limit to reset...
+[2025-01-02T00:13:16.336Z] 
+TEST 2: Testing failed authentication scenarios
+[2025-01-02T00:13:16.336Z] Step 2.1: Testing wrong password
+[2025-01-02T00:13:16.342Z] Step 2.1a: Received response with status 401
+[2025-01-02T00:13:16.342Z] Step 2.2: Wrong password correctly rejected
+[2025-01-02T00:13:21.344Z] Step 2.3: Testing honeypot username field
+[2025-01-02T00:13:21.352Z] Step 2.3a: Received response with status 401
+[2025-01-02T00:13:21.352Z] Step 2.4: Honeypot username correctly triggered
+[2025-01-02T00:13:26.353Z] Step 2.5: Testing rate limiting
+[2025-01-02T00:13:26.372Z] Step 2.5a: Received response statuses: 403, 403, 403
+[2025-01-02T00:13:26.372Z] TEST 2: FAILED - Rate limiting not working. Got statuses: 403, 403, 403
+[2025-01-02T00:13:26.372Z] 
+All tests completed.

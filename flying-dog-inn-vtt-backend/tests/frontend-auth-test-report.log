@@ -1,0 +1,13 @@
+[2025-01-02T00:13:26.442Z] Starting frontend authentication flow tests...
+[2025-01-02T00:13:26.449Z] TEST 1: Testing initial authentication check
+[2025-01-02T00:13:26.450Z] Step 1.1: Checking auth status without token
+[2025-01-02T00:13:26.462Z] Step 1.2: Correctly reported as not authenticated without token
+[2025-01-02T00:13:26.463Z] Step 1.3: Attempting login with correct credentials
+[2025-01-02T00:13:26.466Z] TEST 1: FAILED - Login failed: 403
+[2025-01-02T00:13:26.467Z] Waiting 5 seconds for rate limit to reset...
+[2025-01-02T00:13:31.468Z] 
+TEST 2: Testing protected route access
+[2025-01-02T00:13:31.469Z] Step 2.1: Attempting to access protected route without token
+[2025-01-02T00:13:31.493Z] TEST 2: FAILED - Expected 401 status, got 200
+[2025-01-02T00:13:31.493Z] 
+All frontend authentication tests completed.
